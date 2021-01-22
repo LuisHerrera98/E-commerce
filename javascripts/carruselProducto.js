@@ -25,7 +25,7 @@ jQuery('document').ready(function($){
 document.addEventListener('DOMContentLoaded', () => {
     const elementosCarousel = document.querySelectorAll('.carousel')
     M.Carousel.init(elementosCarousel, {
-        duration: 150,
+        duration: 15,
         dist: 10,
         shift: 5,
         padding: 5,
