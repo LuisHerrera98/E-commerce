@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Carrito</title>
+    
+        <!-- Iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> 
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+            
+        <!--Materialize-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+        <!-- CSS Estilos de Carrusel -->
+        <link rel="stylesheet" href="carrusel.css">
+        
+        <!-- CSS Estilos -->
+        <link rel="stylesheet" href="stylesheets/style.css">
+    
+        <link rel="stylesheet" href="stylesheets/styleCarrito.css">
+        <!--CSS DEL REGISTRO PERRIS-->
+        <link rel="stylesheet" href="stylesheets/styleRegistro.css">
+        
+        <!--TIPOGRAFIA GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    
+        <!--EFECTOS DEL HEADER-->
+        <link rel="stylesheet" href="stylesheets/estilosHeader.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <header class="header" id="header" >
+        <div class="container2 logo-nav-container">
+            <div class="icon-busq">
+                <a href="index.html"  class="logo"><img src="imagenes/corona.jpg" alt=""></a>
+               <div>
+                <input style="color: aliceblue !important;" class="inputBuscar" type="text" placeholder="Buscar">
+               </div>
+                <a href="carrito.html" class="link-carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            <div id="menu--navegacion" class="navegacion">
+                <section id="carritoAparecer" class="divCarritoXD">
+                        <a href="carrito.html" class="link-carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                </section>
+            <span class="menu-icon"><a href="#"><p class="palabraMenu"><i class="fas fa-home"></i>Menu</p><i class=" fas fa-bars"></i></a></span>
+            
+                <ul class="menuNavegacion">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="productos.html"><i class="fas fa-shopping-bag"></i> Productos</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-phone-square-alt"></i> Contacto</a></li>
+                    <li><a href="comoComprar.html"><i class="fas fa-cart-plus"></i> Como comprar</a></li>
+                    
+                        <li><a href="registro.html"><i class="fab fa-creative-commons-by"></i> Crear Cuenta</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </header>
+    <header class="header-compu" id="heade">
+    <div class="menuSuperior">
+        <div class="logo-nombre">
+            <img src="imagenes/corona.jpg" alt="">
+            <h6>NachoStore</h6>
+        </div>
+        <div class="caja-input">
+            <input type="text" placeholder="Buscar" >
+        </div>
+        <div class="menuSuperiorDerecho">
+                <a href="registro.html">Crear Cuenta</a>
+                <a href="login.html">Iniciar Sesion</a>
+    
+    </div>
+    </div class="navegacionMenuInferior">
+         <ul class="listaNavegacion">
+            <a href="index.html"><li>Inicio</li></a>
+            <a href="productos.html"><li>Productos</li></a>
+            <a href="contacto.html"><li>Contacto</li></a>
+            <a href="comoComprar.html"><li>Como Comprar</li></a>
+             <div class="cajitaDelCarrito">
+                 <a href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </ul>
+    <div>
+    
+    </div>
+    
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td><strong>Productos</strong></td>
+                <td><strong>Precio con descuento</strong></td>
+            </tr>
+                <tr>
+                    <td class="">
+                        <div class="imgg">
+                            <img src="imagenesProductos/imagen-1608515626324.jpeg" class="img-carrito" alt="imagen del Producto">
+                        </div>
+                        <p class="detalle-carrito">nombre</p class="producc">
+                        <h3 class="prec precio-unidad">precio</h3>
+                    </td>
+                    <td class="subtotal">
+                        <h3 class="prec precio-cantidad">precio con descuento</h3>
+                        <a href="/borrado/<%=productos[i].id%>" style="color: rgb(43, 42, 42); margin-left: 35px; margin-top: 5px;"><i class="fas fa-trash-alt prec"></i></a>
+                    </td>
+                </tr>
+        </table>
+
+        <h2>Total:</h2>
+        <HR></HR>
+        <BR></BR>
+        
+        <form action="/carrito/<%=usuario.id%>" method="POST" class="formularioPerris">
+            <h1 style="font-size: 32px; margin: auto 0;">Completar datos para la compra</h1>
+            <input type="text" name="usuario_id" value="" style="display: none;">
+            <input type="text" name="carrito_id" value="" style="display: none;">
+            <hr>
+            <br>
+            <br>
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" name="nombre" value="" id="nombre" >
+            <BR></BR>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" value="" id="email">    
+            <BR></BR>
+
+            <label for="telefono">Telefono - WhatsApp - (<span style="font-size: 20px; color: rgb(231, 64, 64); margin-left: 10px; margin-right: 10px;">Obligatorio!</span>)</label>
+                <input type="number" name="telefono" value="" id="telefono">    
+                <BR></BR>
+            
+            
+            <label for="nombre">Direccion (<span style="font-size: 20px; color: rgb(231, 64, 64); margin-left: 10px; margin-right: 10px;">Obligatorio!</span>)</label>
+                <input type="text" name="direccion" value="" id="direccion">
+            <div class="errores">
+                <ul>
+    
+                </ul>
+            </div>
+            
+
+            <button type="submit">Comprar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="lista">
+                <nav class="centrar">
+                    <h4>NAVEGACIÓN</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Tabla de talles</a></li>
+                        <li><a href="#">Como comprar</a></li>
+                    </ul>
+                </nav>
+    
+                <nav class="medios-pago centrar">
+                    <h4>MEDIOS DE PAGO</h4>
+                    <a href="#"><img src="imagenes/medios-pago.png" alt=""></a>
+                </nav>
+    
+                <nav class="contactanos centrar">
+                    <h4>CONTACTANOS</h4>
+                    <ul>
+                        <li><a href="#">2216497631 / WhatsApp 2216497631 / Mayoristas 2216497631</a></li>
+                        <li><a href="#">luchoherrerafernandez@gmail.com</a></li>
+                        <li><a href="#">Calle Falsa 1234</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="seguinos">
+                <h4>Seguinos</h4>
+                <hr class="linea">
+                <a href="#"><img src="imagenes/facebook.png" alt=""></a>
+                <a href="#"><img src="imagenes/instagram-bosquejado.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <a href="https://wa.me/5211234567890?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+    <script src="javascripts/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="javascripts/scripts.js"></script>
+
+    <script src="javascripts/scriptCarrusel.js"></script>
+
+    <script src="javascripts/headroom.min.js"></script>
+
+    <script src="javascripts/menu.js"></script>
+
+    <script src="javascripts/masonry.js"></script>
+
+    <script src="javascripts/validacionesVistaCarrito.js"></script>
+
+</body>
+</html>
